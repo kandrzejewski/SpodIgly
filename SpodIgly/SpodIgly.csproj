@@ -168,6 +168,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104282007000_InitialCreate.cs" />
+    <Compile Include="Migrations\202104282007000_InitialCreate.designer.cs">
+      <DependentUpon>202104282007000_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104282025227_ShortDescriptionRemoved.cs" />
+    <Compile Include="Migrations\202104282025227_ShortDescriptionRemoved.designer.cs">
+      <DependentUpon>202104282025227_ShortDescriptionRemoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Order.cs" />
@@ -198,6 +207,14 @@
   <ItemGroup>
     <Analyzer Include="packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
     <Analyzer Include="packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104282007000_InitialCreate.resx">
+      <DependentUpon>202104282007000_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104282025227_ShortDescriptionRemoved.resx">
+      <DependentUpon>202104282025227_ShortDescriptionRemoved.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

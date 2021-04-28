@@ -14,10 +14,10 @@ namespace SpodIgly.DAL
 
         }
         
-        static StoreContext()
-        {
-            Database.SetInitializer<StoreContext>(new StoreInitializer());
-        }
+        //static StoreContext()
+        //{
+        //    Database.SetInitializer<StoreContext>(new StoreInitializer());
+        //}
 
         public DbSet<Album> Albums { get; set; }
         public DbSet<Genre> Genres { get; set; }

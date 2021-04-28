@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Data.Entity.Migrations;
 
 namespace SpodIgly.DAL
 {
@@ -34,7 +35,7 @@ namespace SpodIgly.DAL
                 new Genre() {GenreId = 12, Name = "Promocje", IconFilename="proms.png"},
             };
 
-            genres.ForEach(g => context.Genres.Add(g));
+            genres.ForEach(g => context.Genres.AddOrUpdate(g));
             context.SaveChanges();
 
             var albums = new List<Album>
@@ -50,7 +51,7 @@ namespace SpodIgly.DAL
                 new Album() { AlbumId = 9, ArtistName = "Str8ts", AlbumTitle = "Sneakers Only", Price = 25, CoverFileName = "9.png", IsBestseller = false, DateAdded = new DateTime(2014, 04, 2), GenreId = 2 }
             };
 
-            albums.ForEach(a => context.Albums.Add(a));
+            albums.ForEach(a => context.Albums.AddOrUpdate(a));
             context.SaveChanges();
         }
     }
