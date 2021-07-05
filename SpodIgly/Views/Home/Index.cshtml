@@ -4,6 +4,8 @@
     ViewBag.Title = "Witaj w SpodIgły!";
 }
 
+@Html.Partial("_ViewSwitcher")
+
 <nav class="genres-horizontal">
     <ul>
         @foreach (var genre in Model.Genres)
