@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
+﻿using System.Configuration;
 
 namespace SpodIgly.Infrastructure
 {
     public class AppConfig
     {
-        private static string _genreIconsFolderRelative = ConfigurationManager.AppSettings["GenerIconsFolder"];
+        private static string _genreIconsFolderRelative = ConfigurationManager.AppSettings["GenreIconsFolder"];
         public static string GenreIconsFolderRelative
         {
             get

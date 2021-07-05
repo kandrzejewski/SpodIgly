@@ -11,19 +11,19 @@ namespace SpodIgly.Controllers
 {
     public class HomeController : Controller
     {
-        private StoreContext db = new StoreContext();
+        private readonly StoreContext _db = new StoreContext();
         
         // GET: Home
         public ActionResult Index()
         {
-            var genres = db.Genres
+            var genres = _db.Genres
                 .ToList();
-            var newArrivals = db.Albums
+            var newArrivals = _db.Albums
                 .Where(a => !a.IsHidden)
                 .OrderByDescending(a => a.DateAdded)
                 .Take(3)
                 .ToList();
-            var bestsellers = db.Albums
+            var bestsellers = _db.Albums
                 .Where(a => !a.IsHidden && a.IsBestseller)
                 .OrderBy(g => Guid.NewGuid())
                 .Take(3)
